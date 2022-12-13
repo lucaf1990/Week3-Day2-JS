@@ -22,11 +22,11 @@ stringa("Epicode", "Scuola");
 
 let arrayRandom = [];
 for (let i = 0; i <= 10; i++) {
-  const randomElement = [Math.random(1)];
-  console.log(...randomElement);
-  [...arrayRandom[i]] = [...randomElement];
+  const randomElement = Math.floor(Math.random() * 100);
+
+  arrayRandom[i] = randomElement;
 }
-console.log(arrayRandom);
+console.log("QUESTI ELEMENTI", arrayRandom);
 
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli
@@ -69,14 +69,30 @@ const arrayDiNum3 = [14, 25, 26, 8, 4, 69, 56, 14];
 let arraydinum43 = arrayDiNum3.map((num) => num + 2);
 console.log(arraydinum43);
 /* ESERCIZIO 8
-  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
+  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array 
+  contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const arrayDiStri = [
+  "Ciao",
+  "Macchina",
+  "Automobile",
+  "Supercalifragiliinstichespiralidoso",
+];
+
+const quantiLettStrin = arrayDiStri.map((stringa) => stringa.length);
+console.log(quantiLettStrin);
 
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
-
+let newArrOfOdd = [];
+for (let i = 0; i < 100; i++) {
+  if (i % 2 !== 0) {
+    newArrOfOdd.push(i);
+  }
+}
+console.log(newArrOfOdd);
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
@@ -196,18 +212,39 @@ const movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+let year = [];
+let findMovie = movies.filter((num) => {
+  return num.Year, year.push(num.Year);
+});
+console.log(year);
 
+year.sort();
+console.log(year);
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+let countOfMovie = [];
+let numOfMovie = movies.filter((num) => {
+  return num.Title, countOfMovie.push(num.Title);
+});
+console.log(countOfMovie.length);
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
-
+let countOfMovie2 = [];
+let numOfMovie2 = movies.filter((num) => {
+  return num.Title, countOfMovie2.push(num.Title);
+});
+console.log(countOfMovie2);
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+let countOfMovie5 = [];
+let numOfMovie5 = movies.filter((num) => {
+  if (num.Year < 2000) return num.Year;
+  console.log(num.Year, "E' USCITO DOPO IL 2000");
+});
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -216,3 +253,12 @@ const movies = [
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+let year2 = [];
+let findMovie4 = movies.filter((num) => {
+  return num.Year, year2.push(num.Year);
+});
+console.log(year2);
+for (let i = 0; i < year2.length; i++) {
+  const element = year2[i];
+  console.log(element);
+}
