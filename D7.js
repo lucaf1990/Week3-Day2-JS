@@ -254,6 +254,7 @@ let numOfMovie5 = movies.filter((num) => {
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 let year2 = [];
+let sum = 0;
 let findMovie4 = movies.filter((num) => {
   return num.Year, year2.push(num.Year);
 });
@@ -261,4 +262,6 @@ console.log(year2);
 for (let i = 0; i < year2.length; i++) {
   const element = year2[i];
   console.log(element);
+  sum += element[i];
+  console.log(sum.length);
 }
