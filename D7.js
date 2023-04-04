@@ -249,6 +249,17 @@ let numOfMovie5 = movies.filter((num) => {
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+let list = [];
+
+let mymovies = (param) => {
+  movies.filter((mov) => {
+    if (mov.imdbID === param) {
+      console.log(mov);
+    }
+  });
+};
+mymovies("tt0848228");
+mymovies("tt4154796");
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
