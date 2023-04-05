@@ -252,13 +252,9 @@ let numOfMovie5 = movies.filter((num) => {
 let list = [];
 
 let mymovies = (param) => {
-  movies.filter((mov) => {
-    if (mov.imdbID === param) {
-      console.log(mov);
-    }
-  });
+  return movies.filter((mov) => mov.imdbID === param);
 };
-mymovies("tt0848228");
+console.log(mymovies("tt0848228"));
 mymovies("tt4154796");
 
 /* ESERCIZIO 15
